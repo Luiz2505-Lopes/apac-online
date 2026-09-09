@@ -2,43 +2,37 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>APAC Online - Gerador PDF</title>
+<title>Gerador APAC Online</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-<h1>Sistema APAC Online</h1>
-<p>Gerador de Laudo de Solicitação / Autorização</p>
-</header>
+<h1>APAC - Autorização de Procedimentos Ambulatoriais</h1>
 
-<main>
-<section class="card">
-<h2>Identificação do Paciente</h2>
-<input id="nome" placeholder="Nome do paciente">
-<input id="cns" placeholder="CPF ou CNS">
-<input id="nascimento" placeholder="Data de nascimento">
-<input id="mae" placeholder="Nome da mãe">
+<div class="form">
+<input id="estabelecimento" placeholder="NOME DO ESTABELECIMENTO DE SAÚDE SOLICITANTE">
+<input id="cnes" placeholder="CNES">
 
-<h2>Procedimento</h2>
-<input id="procedimento" placeholder="Nome do procedimento">
-<input id="codigo" placeholder="Código do procedimento">
+<h3>IDENTIFICAÇÃO DO PACIENTE</h3>
+<input id="paciente" placeholder="NOME DO PACIENTE">
+<input id="cpf" placeholder="CPF OU CARTÃO NACIONAL DE SAÚDE (CNS)">
+<input id="mae" placeholder="NOME DA MÃE">
+<input id="nascimento" placeholder="DATA DE NASCIMENTO">
+<input id="sexo" placeholder="SEXO">
+<input id="municipio" placeholder="MUNICÍPIO DE RESIDÊNCIA">
 
-<h2>Diagnóstico</h2>
+<h3>PROCEDIMENTO SOLICITADO</h3>
+<input id="codigo" placeholder="CÓDIGO DO PROCEDIMENTO PRINCIPAL">
+<input id="procedimento" placeholder="NOME DO PROCEDIMENTO PRINCIPAL">
+
+<h3>DADOS DO DIAGNÓSTICO</h3>
 <input id="cid" placeholder="CID 10">
-<textarea id="justificativa" placeholder="Justificativa do procedimento"></textarea>
+<textarea id="justificativa" placeholder="JUSTIFICATIVA DO(S) PROCEDIMENTO(S) SOLICITADO(S)"></textarea>
 
-<h2>Solicitante</h2>
-<input id="profissional" placeholder="Nome do profissional solicitante">
+<h3>SOLICITAÇÃO</h3>
+<input id="solicitante" placeholder="NOME DO PROFISSIONAL SOLICITANTE">
 
-<button onclick="gerarPDF()">GERAR PDF APAC</button>
-</section>
-
-<section class="preview">
-<h2>Pré-visualização</h2>
-<div id="resultado"></div>
-</section>
-</main>
+<button onclick="gerar()">GERAR PDF APAC</button>
+</div>
 
 <script src="script.js"></script>
 </body>
