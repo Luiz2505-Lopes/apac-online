@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APAC Online - Gerador PDF</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Sistema APAC Online</h1>
+<p>Gerador de Laudo de Solicitação / Autorização</p>
+</header>
+
+<main>
+<section class="card">
+<h2>Identificação do Paciente</h2>
+<input id="nome" placeholder="Nome do paciente">
+<input id="cns" placeholder="CPF ou CNS">
+<input id="nascimento" placeholder="Data de nascimento">
+<input id="mae" placeholder="Nome da mãe">
+
+<h2>Procedimento</h2>
+<input id="procedimento" placeholder="Nome do procedimento">
+<input id="codigo" placeholder="Código do procedimento">
+
+<h2>Diagnóstico</h2>
+<input id="cid" placeholder="CID 10">
+<textarea id="justificativa" placeholder="Justificativa do procedimento"></textarea>
+
+<h2>Solicitante</h2>
+<input id="profissional" placeholder="Nome do profissional solicitante">
+
+<button onclick="gerarPDF()">GERAR PDF APAC</button>
+</section>
+
+<section class="preview">
+<h2>Pré-visualização</h2>
+<div id="resultado"></div>
+</section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
